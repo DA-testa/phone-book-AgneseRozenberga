@@ -15,11 +15,9 @@ def process_queries(queries):
     contacts = {}
     # Keep list of all existing (i.e. not deleted yet) contacts.
     for cur_query in queries:
-        if cur_query.type == 'add': 
-            contacts[cur_query.number] = cur_query.name
-        elif cur_query.type == 'del':
-            if cur_query.number in contacts:
-                del contacts[cur_query.number]
+        if cur_query.type == 'add': contacts[cur_query.number] = cur_query.name
+        elif cur_query.type == 'del': 
+            if cur_query.number in contacts: del contacts[cur_query.number]
         else: response = contacts.get(cur_query.number, 'not found'); result.append(response)
     return result
 
