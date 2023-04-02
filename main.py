@@ -23,6 +23,4 @@ def process_queries(queries):
         else: response = contacts.get(cur_query.number, 'not found'); result.append(response)
     return result
 
-if __name__ == '__main__': 
-    write_responses(process_queries(read_queries()))
-
+if __name__ == '__main__': write_responses(process_queries(read_queries()))
