@@ -42,6 +42,7 @@ def process_queries(queries):
             result.append(response)
     return result
 
+
 if __name__ == '__main__':
     write_responses(process_queries(read_queries()))
 
