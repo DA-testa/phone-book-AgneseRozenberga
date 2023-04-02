@@ -6,8 +6,7 @@ class Query:
         if self.type == 'add': self.name = query[2]
 
 def read_queries():
-    n = int(input()) 
-    return [Query(input().split()) for i in range(n)]
+    n = int(input()) ; return [Query(input().split()) for i in range(n)]
 
 def write_responses(result): print('\n'.join(result))
 
